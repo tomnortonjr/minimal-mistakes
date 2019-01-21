@@ -1,11 +1,13 @@
 <p></p>
+<div class = "grow">
 <a href="/github-repos/"<h3>Github Repos</h3></a>
+</div>
   <!--<li>
     <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>-->
-{% for repository in site.github.public_repositories %}
+{% for repository in site.github.public_repositories limit:20 %}
   <li>
 	<a href="{{ repository.html_url }}" itemprop="sameAs" rel="nofollow noopener noreferrer" target="_blank">
 		<i class="fab fa-github-square"></i> {{ repository.name }}
