@@ -18,10 +18,10 @@ minimal_mistakes_skin    : "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Tom's Blog"
+title                    : "Tom Norton Jr."
 title_separator          : "-"
 name                     : "Tom Norton Jr."
-description              : "Coming soon."
+description              : ""
 url                      : "https://tomnortonjr.github.io"
 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : #"/"
@@ -31,7 +31,7 @@ repository               : "tomnortonjr/tomnortonjr.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
@@ -88,7 +88,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : 
 facebook:
   username               :
   app_id                 :
@@ -111,43 +111,52 @@ analytics:
 
 # Site Author
 author:
-  name             : "Tom Norton Jr."
+  name             : "Tom N"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Coming Soon!"
-  location         : "US"
+  bio              : "Senior Database Administrator with a passion for PowerShell, fishing, science, system integrations, family, and fishing."
+  location         : "United States"
   email            :
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      icon: "fas fa-envelope-square"
+      # url: mailto:tnortonjr@gmail.com
     - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://tomnortonjr.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+      icon: "fas fa-link"
+      # url: "https://tomnortonjr.com"
+    - label: "@tomnortonjr"
+      icon: "fab fa-twitter-square"
+      url: "https://twitter.com/tomnortonjr"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url:  "https://www.linkedin.com/in/tomnortonjr/"
     - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+      icon: "fab fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-github-square"
       url: "https://github.com/tomnortonjr"
+    - label: "Stackoverflow"
+      icon: "fab fa-stack-overflow"
+      url:  "https://stackoverflow.com/users/10936036/tom-norton-jr"
+    - label:  "TechNet"
+      icon: "fab fa-windows"
+      url:   "https://social.technet.microsoft.com/profile/thetjn/"
     - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fab fa-instagram"
       # url: "https://instagram.com/"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
+      icon: "fab fa-twitter-square"
+      url: "https://twitter.com/tomnortonjr"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
+      icon: "fab fa-github-square"
+      url: "https://github.com/tomnortonjr"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -237,6 +246,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -265,16 +275,16 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+#jekyll-archives:
+#  enabled:
+#    - categories
+#    - tags
+#  layouts:
+#    category: archive-taxonomy
+#    tag: archive-taxonomy
+#  permalinks:
+#    category: /categories/:name/
+#    tag: /tags/:name/
 
 
 # HTML Compression
@@ -295,6 +305,13 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+      # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
