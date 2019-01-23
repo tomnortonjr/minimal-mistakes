@@ -1,4 +1,5 @@
 ---
+title: About
 toc: true
 permalink: /about/
 categories: About
