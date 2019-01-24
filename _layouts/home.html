@@ -3,11 +3,30 @@ layout: archive
 ---
 
 {{ content }}
-
+<!--
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
+
+
 {% for post in paginator.posts %}
-  {% include archive-single.html %}
+  <p>{% include archive-single.html %}</p>  
+{% endfor %}
+
+{% include paginator.html %}
+-->
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% for post in paginator.posts limit:15 %}
+<br />
+<div class="thumbnail">
+    {% if post.header.teaser %}
+	<img src="{{ post.header.teaser }}" align="right" height="200" width="200"/>
+	{% else %}
+	<img src="/assets/images/no-thumbnail.jpg" align="right" height="200" width="200"/>
+	{% endif %}
+</div>
+  {% include archive-single.html %} 
+<hr />  
 {% endfor %}
 
 {% include paginator.html %}
