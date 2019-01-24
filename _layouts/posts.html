@@ -23,9 +23,11 @@ layout: archive
       {% for post in year.items %}
 	  <div class="thumbnail">
 		{% if post.header.teaser %}
-		<img src="{{ post.header.teaser }}" align="right" height="180" width="180"/>
+		<a href="{{ post.url | relative_url }}">
+		<img style="padding:3px 3px 15px 3px;" src="{{ post.header.teaser }}" align="right" height="180" width="180"/></a>
 		{% else %}
-		<img src="/assets/images/no-thumbnail.jpg" align="right" height="180" width="180"/>
+		<a href="{{ post.url | relative_url }}">
+		<img style="padding:3px 3px 15px 3px;" src="/assets/images/no-thumbnail.jpg" align="right" height="180" width="180"/></a>
 		{% endif %}		
 	  </div>	  	  
         {% include archive-single.html type=page.entries_layout %}			
